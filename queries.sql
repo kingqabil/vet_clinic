@@ -42,7 +42,6 @@ UPDATE animals SET species = 'digimon' WHERE name LIKE '%mon';
 
 --Update the animals table by setting the species column to pokemon for all animals that don't have species already set.
 
-BEGIN;
 UPDATE animals SET species = 'pokemon' WHERE species is NULL;
 -- Commit the transaction
 COMMIT TRANSACTION;
@@ -83,8 +82,8 @@ neutered,MAX(escape_attempts)
 FROM animals
 GROUP BY neutered
 -- What is the minimum and maximum weight of each type of animal?
-SELECT MIN(weight_kg),MAX(weight_kg) FROM animals;
+SELECT species, MIN(weight_kg),MAX(weight_kg) FROM animals GROUP BY species;
 -- What is the average number of escape attempts per animal type of those born between 1990 and 2000?
-SELECT AVG(escape_attempts)
-FROM animals
+SELECT species, AVG(escape_attempts)
+FROM animals GROUP BY species
 WHERE date_of_birth BETWEEN '1990-01-01' AND '2000-12-31';
