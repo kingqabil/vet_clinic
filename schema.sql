@@ -14,14 +14,15 @@ ALTER TABLE animals ADD species varchar(100); /*ALTER command is for changing th
 
 --Create a table named owners
 CREATE TABLE owners(
-   id INT PRIMARY KEY,
+   id INT GENERATED ALWAYS AS IDENTITY,
    full_name VARCHAR(255),
-   age INT
+   age INT,
+   PRIMARY KEY(id)
 );
 
 --Create a table named species
 CREATE TABLE species(
-   id INT,
+   id INT GENERATED ALWAYS AS IDENTITY,
    name VARCHAR(255),
    PRIMARY KEY(id)
    );
