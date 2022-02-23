@@ -121,7 +121,11 @@ SELECT vets.name, animals.name, date_of_visit FROM vets JOIN visits ON vets.id=v
 JOIN animals ON animals.id= visits.animals_id WHERE vets.name ='William Tatcher' ORDER BY visits.date_of_visit DESC LIMIT 1;
 
 --How many different animals did Stephanie Mendez see?
-SELECT COUNT(*) as total_animals from vets JOIN visits ON vets.id = visits.vets_id WHERE name='Stephanie Mendez';
+SELECT DISTINCT animals.name
+FROM visits
+LEFT JOIN animals ON animals.id = visits.animal_id
+LEFT JOIN vets ON vets.id = visits.vet_id
+WHERE vets.name = 'Stephanie Mendez';
 
 --List all vets and their specialties, including vets with no specialties.
 SELECT
