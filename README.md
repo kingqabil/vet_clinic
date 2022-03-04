@@ -6,7 +6,7 @@
 
 # Vet_Clinic
 
-<iframe width="100%" height="500px" style="box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); border-radius:15px;" allowtransparency="true" allowfullscreen="true" scrolling="no" title="Embedded DrawSQL IFrame" frameborder="0" src="https://drawsql.app/smart-so/diagrams/vet-clinic-1/embed"></iframe>
+![VET CLINIC](https://github.com/kingqabil/vet_clinic/blob/digram/shots/Screenshot.png?raw=true)
 
 > In this project we will use a relational database to create the initial data structure for a vet clinic.
 > We will create a table to store animals' information, insert some data into it, and query it.
