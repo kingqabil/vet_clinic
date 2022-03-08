@@ -6,6 +6,8 @@
 
 # Vet_Clinic
 
+![VET CLINIC](https://github.com/kingqabil/vet_clinic/blob/digram/shots/Screenshot.png?raw=true)
+
 > In this project we will use a relational database to create the initial data structure for a vet clinic.
 > We will create a table to store animals' information, insert some data into it, and query it.
 
